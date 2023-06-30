@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  foodapp.restapi:
+    image: ${DOCKER_REGISTRY-}foodapprestapi
+    build:
+      context: .
+      dockerfile: FoodApp.RestAPI/Dockerfile
+  db:
+    image: "mcr.microsoft.com/mssql/server:2017-latest"
